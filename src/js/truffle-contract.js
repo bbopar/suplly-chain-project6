@@ -26,6 +26,7 @@ var contract = (function(module) {
   };
 
   var BigNumber = (new Web3()).toBigNumber(0).constructor;
+  // var BigNumber = web3.utils.toBN(0).constructor;
 
   var Utils = {
     is_object: function(val) {
@@ -482,7 +483,7 @@ var contract = (function(module) {
             return accept(self.network_id);
           }
         }
-
+        
         self.web3.version.getNetwork(function(err, result) {
           if (err) return reject(err);
 
